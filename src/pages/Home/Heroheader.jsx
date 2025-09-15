@@ -4,16 +4,16 @@ export default function ProductShowcase() {
   const slides = [
     {
       id: 1,
-      img: "https://www.bweld.in/upload/slider/1734428285.webp",
+      img: "/assets/image/cnc-banner.jpg",
     },
     {
       id: 2,
-      img: "https://www.bweld.in/upload/slider/1734428278.webp",
+      img: "/assets/image/cnc-banner2.jpg",
      
     },
      {
-      id: 2,
-      img: "https://www.bweld.in/upload/slider/1734432990.webp",
+      id: 3,
+      img: "/assets/image/cnc banner3.jpg",
      
     },
      

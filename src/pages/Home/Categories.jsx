@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const WeldingCategories = () => {
+const Categories = () => {
   const [activeCategory, setActiveCategory] = useState('Stone CNC Router');
 
   const categories = [
@@ -43,17 +43,17 @@ const WeldingCategories = () => {
 
   // Render product cards
   const renderProductCards = (products) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6">
       {products.map((product, index) => (
         <div 
           key={index} 
           className="bg-white border shadow-md overflow-hidden hover:shadow-lg transition-shadow"
         >
-          <div className="bg-[#F6F9FF] border-b flex justify-center items-center h-44">
+          <div className="bg-[#F6F9FF] border-b flex justify-center items-center h-44 sm:h-48 md:h-48 lg:h-44">
             <img
               src={product.img}
               alt={product.name}
-              className="p-2 object-contain h-full w-full transform transition-transform duration-1000 hover:rotate-y-180"
+              className="p-2 object-contain h-full w-full transform transition-transform duration-500 hover:scale-105"
             />
           </div>
           <div className="p-2 text-center">
@@ -65,7 +65,7 @@ const WeldingCategories = () => {
   );
 
   return (
-    <div className="bg-gray-50 min-h-screen py-2 px-10">
+    <div className="bg-gray-50 min-h-screen py-6 px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8">
@@ -84,12 +84,12 @@ const WeldingCategories = () => {
 
         {/* Navigation Tabs */}
         <div className="flex flex-wrap justify-center mb-12 bg-[#F6F9FF] border-b border-gray-200">
-          <div className="flex flex-wrap gap-8">
+          <div className="flex flex-wrap gap-6">
             {categories.map((category) => (
               <button 
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`pb-4 px-2 font-medium transition-colors ${
+                className={`pb-3 px-2 font-medium transition-colors text-sm sm:text-base ${
                   activeCategory === category
                     ? 'text-[#2457AA] border-b-2 border-[#2457AA]'
                     : 'text-gray-800 hover:text-gray-800'
@@ -108,4 +108,4 @@ const WeldingCategories = () => {
   );
 };
 
-export default WeldingCategories;
+export default Categories;

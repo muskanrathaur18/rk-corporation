@@ -11,6 +11,8 @@ import ContactPage from "./pages/contact/Contact";
 import AboutUs from "./pages/about/AboutUs";
 import BlogPage from "./pages/blog/Blog";
 import BlogDetail from "./pages/blog/Blogdetails";
+import CareerPage from "./pages/career/Career";
+import ProductPage from "./pages/product/Product";
 const Layout = () => {
   return (
     <>
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
       {
         path: "/blog/:id",
         element: <BlogDetail />,
+      },
+      {
+        path: "/career",
+        element: <CareerPage />,
+      },
+      {
+        path: "/product",
+        element: <ProductPage />,
       },
     ],
   },

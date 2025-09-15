@@ -1,7 +1,7 @@
 import React from "react";
 import { GiTechnoHeart, GiElectric, GiShield } from "react-icons/gi";
 
-function ProductFeatures() {
+function Aboutus() {
   const features = [
     {
       title: "Innovative Technology",
@@ -30,10 +30,10 @@ function ProductFeatures() {
   ];
 
   return (
-    <section className="bg-gray-50 py-4">
-      <div className="max-w-6xl mx-auto px-0">
+    <section className="aboutus py-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Features Container */}
-        <div className="flex flex-row w-full">
+        <div className="flex flex-col md:flex-row w-full">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -54,4 +54,4 @@ function ProductFeatures() {
   );
 }
 
-export default ProductFeatures;
+export default Aboutus;

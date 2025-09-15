@@ -1,76 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const products = [
-  {
-    name: "Stone CNC Router",
-    image: " /assets/image/bg themes/Stone-CNC-Router.png",
-  },
-  {
-    name: "Stone 3D CNC Machine",
-    image: " /assets/image/bg themes/3D-Wood-CNC-Router.png",
-  },
-  {
-    name: "Stone Engraving CNC Router Machine",
-    image: " /assets/image/bg themes/Stone-Engraving-CNC-Router.png",
-  },
-  {
-    name: "Heavy Duty Stone CNC Router",
-    image: " /assets/image/bg themes/Heavy-Duty-Stone-CNC-Router.png",
-  },
-  {
-    name: "Automatic Tool Changing CNC Router",
-    image: " /assets/image/Automatic-Tool-Changing-CNC-Router.jpg",
-  },
-  {
-    name: "1325 Stone CNC Router",
-    image: " /assets/image/bg themes/cnc-stone-router-1325.png",
-  },
-  {
-    name: "Multi Head CNC Router",
-    image: " /assets/image/bg themes/Multi-Head-CNC-Router.png",
-  },
-  {
-    name: "8x4 Feet Stone CNC Router",
-    image: " /assets/image/bg themes/8x4-Feet-Stone-CNC-Router.png",
-  },
-  {
-    name: "Stone CNC Router With Rotary",
-    image: " /assets/image/bg themes/CNC-Router-With-Rotary.png",
-  },
-  {
-    name: "Wood Engraving CNC Router",
-    image: " /assets/image/bg themes/Wood-Engraving-CNC-Router-Machine.png",
-  },
-  {
-    name: "Furniture CNC Routers",
-    image: " /assets/image/bg themes/Furniture-CNC-Router.png",
-  },
-  {
-    name: "CNC Rotary Machine",
-    image: " /assets/image/bg themes/CNC-Rotary-Machine.png",
-  },
-  {
-    name: "Door CNC Router",
-    image: " /assets/image/bg themes/Door-Cutting-CNC-Router.png",
-  },
-  {
-    name: "Mini CNC Router",
-    image: " /assets/image/bg themes/Mini-CNC-Router.png",
-  },
-  {
-    name: "ATC CNC Routers",
-    image: " /assets/image/bg themes/Door-ATC-CNC-Routers.png",
-  },
-  {
-    name: "MDF Board Cutting CNC Router",
-    image: " /assets/image/bg themes/MDF-CNC-Router-With-2-Spindle.png",
-  },
-  {
-    name: "Leather Cutting Machine",
-    image: " /assets/image/bg themes/Leather-Cutting-Machine.png",
-  },
-];
-
+// Counter Component
 const CounterAnimation = ({ target, label, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
@@ -123,21 +53,14 @@ const CounterAnimation = ({ target, label, duration = 2000 }) => {
 };
 
 export default function AboutUs() {
-  const [visibleProducts, setVisibleProducts] = useState(8);
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleShowMore = () => {
-    if (isExpanded) {
-      setVisibleProducts(8);
-      setIsExpanded(false);
-    } else {
-      setVisibleProducts(products.length);
-      setIsExpanded(true);
-    }
-  };
-
   return (
-    <div className="min-h-screen text-gray-800 bg-center" style={{backgroundImage:"url(' /assets/image/bg themes/IMG-20250725-WA0013.jpg')"}}>
+    <div
+      className="min-h-screen text-gray-800 bg-center"
+      style={{
+        backgroundImage:
+          "url('/assets/image/bg themes/IMG-20250725-WA0013.jpg')",
+      }}
+    >
       {/* HERO with enhanced gradient and animations */}
       <header className="bg-gradient-to-r from-white via-gray-100 to-white text-gray-900 relative overflow-hidden">
         {/* Animated background elements */}
@@ -230,7 +153,7 @@ export default function AboutUs() {
       </header>
 
       <main className="container mx-auto px-6 py-16">
-        {/* COMPANY BLURB with enhanced animations */}
+        {/* COMPANY BLURB */}
         <section className="grid lg:grid-cols-3 gap-8 items-start">
           <article className="lg:col-span-2 bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-gray-100">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-3">
@@ -291,7 +214,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            {/* ANIMATED STATISTICS */}
+            {/* STATS */}
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               <CounterAnimation target={45} label="Monthly Units" />
               <CounterAnimation target={15} label="Engineers" />
@@ -304,7 +227,7 @@ export default function AboutUs() {
             </div>
           </article>
 
-          {/* ENHANCED CONTACT CARD */}
+          {/* CONTACT CARD */}
           <aside className="bg-gradient-to-br from-white to-indigo-50 rounded-3xl p-6 shadow-xl border border-indigo-100 hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
             <h3 className="text-xl font-bold text-indigo-800 flex items-center gap-2">
               <span className="text-lg">📊</span> Quick Info
@@ -351,69 +274,7 @@ export default function AboutUs() {
           </aside>
         </section>
 
-        {/* ENHANCED PRODUCTS SECTION */}
-        <section id="products" className="mt-16">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-3">
-              <span className="text-2xl">🛠️</span> Product Range
-            </h3>
-            <p className="text-sm text-gray-600 bg-gradient-to-r from-orange-100 to-red-100 px-4 py-2 rounded-full border border-orange-200">
-              <span className="font-semibold">Major buyers:</span> Haryana, UP,
-              Punjab, Delhi, Rajasthan, J&K 📍
-            </p>
-          </div>
-
-          {/* Product Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {products.slice(0, visibleProducts).map((p, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded-2xl border shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group border-gray-200 hover:border-indigo-300"
-                style={{
-                  animationDelay: `${idx * 100}ms`,
-                  animation: "fadeInUp 0.6s ease-out forwards",
-                }}
-              >
-                {/* Product Image */}
-                <div className="h-40 rounded-xl overflow-hidden border-2 border-dashed border-gray-300 group-hover:border-indigo-300">
-                  <img
-                    src ={p.image}
-                    alt={p.name}
-                    className="h-full w-full object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-
-                {/* Product Title */}
-                <h4 className="mt-4 font-semibold text-sm text-gray-800 group-hover:text-indigo-700 transition-colors duration-300 leading-snug">
-                  {p.name}
-                </h4>
-
-                {/* Availability + Button */}
-                <div className="mt-3 flex items-center justify-between">
-                  <span className="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded-full">
-                    ✓ Available
-                  </span>
-                  <button className="text-indigo-600 hover:text-indigo-800 font-medium text-xs hover:underline transition-all duration-300">
-                    View Details →
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Show More / Less Button */}
-          <div className="mt-8 text-center">
-            <button
-              onClick={handleShowMore}
-              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              {isExpanded ? "📤 Show Less" : "📥 See Full Catalogue"} (
-              {products.length} products)
-            </button>
-          </div>
-        </section>
-
-        {/* ENHANCED USP SECTION */}
+        {/* USP SECTION */}
         <section className="mt-16 grid lg:grid-cols-2 gap-8 items-start">
           <div className="bg-gradient-to-br from-white to-green-50 p-8 rounded-3xl shadow-xl border border-green-100 hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
             <h3 className="text-2xl font-bold text-green-800 flex items-center gap-3 mb-6">
@@ -472,20 +333,47 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
+
+        {/* 🚀 MISSION & VISION SECTION */}
+        <section className="mt-16 grid lg:grid-cols-2 gap-8 items-stretch">
+          {/* Mission */}
+          <div className="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-3xl shadow-xl border border-yellow-100 hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <h3 className="text-2xl font-bold text-yellow-800 flex items-center gap-3 mb-6">
+              <span className="text-2xl">🎯</span> Our Mission
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Our mission is to deliver{" "}
+              <span className="font-semibold text-yellow-700">
+                world-class CNC and Engraving solutions
+              </span>{" "}
+              that empower industries like furniture, signage, and interior
+              designing. We aim to provide cutting-edge technology, reliable
+              after-sales support, and a customer-first approach to ensure
+              lasting partnerships and growth.
+            </p>
+          </div>
+
+          {/* Vision */}
+          <div className="bg-gradient-to-br from-white to-purple-50 p-8 rounded-3xl shadow-xl border border-purple-100 hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <h3 className="text-2xl font-bold text-purple-800 flex items-center gap-3 mb-6">
+              <span className="text-2xl">👁️</span> Our Vision
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Our vision is to become a{" "}
+              <span className="font-semibold text-purple-700">
+                global leader in CNC technology
+              </span>
+              , recognized for innovation, reliability, and excellence. We
+              strive to set benchmarks in quality manufacturing and inspire
+              industries with sustainable, efficient, and future-ready
+              solutions.
+            </p>
+          </div>
+        </section>
       </main>
 
+      {/* Animations */}
       <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
         @keyframes fade-in-up {
           from {
             opacity: 0;
@@ -496,7 +384,6 @@ export default function AboutUs() {
             transform: translateY(0);
           }
         }
-
         @keyframes fade-in-left {
           from {
             opacity: 0;
@@ -507,15 +394,12 @@ export default function AboutUs() {
             transform: translateX(0);
           }
         }
-
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out forwards;
         }
-
         .animate-fade-in-left {
           animation: fade-in-left 0.8s ease-out forwards;
         }
-
         .delay-300 {
           animation-delay: 0.3s;
         }

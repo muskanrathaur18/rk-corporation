@@ -3,7 +3,7 @@ import { Users, Clock3, Award, Headphones } from "lucide-react";
 export default function WhyChooseUs() {
   return (
     <section
-      className="relative w-full bg-cover bg-center"
+      className="relative w-full bg-cover bg-center bg-fixed"
       style={{
         backgroundImage:
           "url('/assets/image/bg themes/man-using-angle-grinder-with-sparks.jpg')",

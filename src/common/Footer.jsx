@@ -106,7 +106,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     to={item.link}
-                    className="text-[#313131] flex items-center group"
+                    className="text-[#313131]  flex items-center group"
                   >
                     <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 transition-all duration-300 group-hover:bg-blue-400 group-hover:w-2 group-hover:h-2"></span>
                     <span>{item.name}</span>
@@ -173,8 +173,8 @@ const Footer = () => {
               <li>
                 <h5 className="text-gray-600 font-medium">Email</h5>
                 <p>
-                  <a href="mailto:marketing@aavonsteels.com" className="hover:text-blue-600 block">marketing@aavonsteels.com</a>
-                  <a href="mailto:ujjwal.s@aavonsteels.com" className="hover:text-blue-600 block">ujjwal.s@aavonsteels.com</a>
+                  <a href="mailto:" className="hover:text-blue-600 block"></a>
+                  <a href="mailto:" className="hover:text-blue-600 block"></a>
                 </p>
               </li>
             </ul>

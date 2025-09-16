@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
 import Home from "./pages/Home/home";
@@ -12,7 +8,9 @@ import AboutUs from "./pages/about/AboutUs";
 import BlogPage from "./pages/blog/Blog";
 import BlogDetail from "./pages/blog/Blogdetails";
 import CareerPage from "./pages/career/Career";
-import ProductPage from "./pages/product/Product";
+import ProductPage from "./pages/product/Productmain";
+import ProductList from "./pages/product/Productmain";
+import ProductDetail from "./pages/product/ProductDetail";
 const Layout = () => {
   return (
     <>
@@ -51,10 +49,9 @@ const router = createBrowserRouter([
         path: "/career",
         element: <CareerPage />,
       },
-      {
-        path: "/product",
-        element: <ProductPage />,
-      },
+      { path: "/productmain", element: <ProductList /> },
+
+      { path: "/product/:id", element: <ProductDetail /> },
     ],
   },
 ]);

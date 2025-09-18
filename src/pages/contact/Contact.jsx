@@ -26,9 +26,10 @@ Message: ${formData.message}`);
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full py-2">
       {/* Hero Section */}
-      <section className="bg-gray-100 h-[300px] relative">
+      <section className=" h-[300px] relative">
+        <img src="https://www.polypackenterprises.com/assets/new-images/images/banner/new-contact-us.jpg" className="w-full h-full object-fit"></img>
         <div className="container mx-auto flex flex-col items-center py-12 px-4">
           {/* Categories */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-60 absolute inset-x-0 inset-y-0 bottom-0 object-contain w-full max-w-5xl left-40">

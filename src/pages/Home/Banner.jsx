@@ -15,7 +15,7 @@ function banner() {
       link: "/feature2"
     },
     {
-      imgSrc: "https://www.bweld.in/frontend/assets/img/b-3.jpg",
+      imgSrc: "/assets/image/banner/cnc-banner4.jpg",
       bgColor: "bg-[#02112B]",
       link: "/feature3"
     },

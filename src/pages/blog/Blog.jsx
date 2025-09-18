@@ -23,7 +23,10 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen py-2">
+      <section className="h-96 max-w-7xl bg-gray-600">
+        <img src="https://aavonsteels.jaikvik.in/images/bg%20themes/blog.jpg" className="w-full h-full object-fit"></img>
+      </section>
       <section className="max-w-7xl mx-auto px-6 py-8 relative">
         <h2 className="text-3xl font-bold text-center mb-4 text-gray-800">
           Latest Articles

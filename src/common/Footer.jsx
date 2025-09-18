@@ -98,7 +98,7 @@ const Footer = () => {
               {[
                 { name: "Home", link: "/" },
                 { name: "About Us", link: "/about" },
-                { name: "Products", link: "/products" },
+                { name: "Products", link: "/productmain" },
                 { name: "Contact Us", link: "/contact" },
                 { name: "Blogs", link: "/blog" },
                 { name: "Career", link: "/career" },

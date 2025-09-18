@@ -15,7 +15,7 @@ export default function TopSellingProducts() {
         <h2 className="text-2xl sm:text-3xl font-bold flex items-center justify-center gap-2">
           <span className="relative inline-block">
             <span className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-600 rounded-full inline-block"></span>
-            <span className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-yellow-400 rounded-full inline-block absolute -top-2 sm:-top-3 -right-2"></span>
+            <span className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-yellow-400 rounded-full inline-block absolute -top-0 sm:-top-0 -right-2"></span>
           </span>
           <span>Top Selling Products</span>
         </h2>
@@ -40,7 +40,7 @@ export default function TopSellingProducts() {
               <img
                 src={product.img}
                 alt={product.title}
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain transform transition-transform duration-500 hover:scale-105"
               />
             </div>
 

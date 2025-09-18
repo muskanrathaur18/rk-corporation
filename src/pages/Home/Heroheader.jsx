@@ -4,16 +4,16 @@ export default function ProductShowcase() {
   const slides = [
     {
       id: 1,
-      img: "/assets/image/cnc-banner.jpg",
+      img: "/assets/image/banner/cnc-banner.jpg",
     },
     {
       id: 2,
-      img: "/assets/image/cnc-banner2.jpg",
+      img: "/assets/image/banner/cnc-banner2.jpg",
      
     },
      {
       id: 3,
-      img: "/assets/image/cnc banner3.jpg",
+      img: "/assets/image/banner/cnc-banner3.jpg",
      
     },
      
@@ -46,7 +46,7 @@ export default function ProductShowcase() {
         <img
           src={slides[current].img}
           alt={slides[current].title}
-          className="w-full h-[280px] md:h-[370px] object-fill transition-all duration-500"
+          className="w-full h-[280px] md:h-[390px] object-fill transition-all duration-500"
         />
 
         {/* Overlay */}
@@ -92,8 +92,8 @@ export default function ProductShowcase() {
       </div>
 
       {/* Right Static Product */}
-      <div className="bg-white max-h-[370px]  flex flex-col justify-between">
-        <img className="h-full object-cover"  src="https://images.unsplash.com/photo-1585201731775-0597e1be4bfb?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+      <div className="bg-white max-h-[390px]  flex flex-col justify-between">
+        <img className="h-full object-fill"src="/assets/image/banner/cnc.jpg"></img>
       </div>
     </section>
   );
